@@ -1,6 +1,12 @@
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelector(".nav-links");
 const navLinkItems = document.querySelectorAll(".nav-links a");
+const themeToggle = document.querySelector(".theme-toggle");
+const storedTheme = localStorage.getItem("portfolio-theme");
+
+if (storedTheme === "dark") {
+  document.body.setAttribute("data-theme", "dark");
+}
 
 if (navToggle && navLinks) {
   navToggle.addEventListener("click", () => {
@@ -13,6 +19,19 @@ if (navToggle && navLinks) {
       navLinks.classList.remove("open");
       navToggle.setAttribute("aria-expanded", "false");
     });
+  });
+}
+
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    const isDark = document.body.getAttribute("data-theme") === "dark";
+    if (isDark) {
+      document.body.removeAttribute("data-theme");
+      localStorage.setItem("portfolio-theme", "light");
+    } else {
+      document.body.setAttribute("data-theme", "dark");
+      localStorage.setItem("portfolio-theme", "dark");
+    }
   });
 }
 
