@@ -1,4 +1,7 @@
 # Archita Guha Roy Portfolio
+<p align="center">
+  <img src="https://github.com/myself-archita/personalPortfolio/blob/main/Archita_portfolioimg.jpeg" width="100%">
+</p>
 
 This repository contains the personal portfolio website for Archita Guha Roy, a B.Tech Computer Science student at KIIT University with interests in AI, robotics, and software systems.
 
